@@ -9,14 +9,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fe438c63458706e03479442743baae6c88256498e6431708f6dfc520a26515d3"
 
 [[package]]
-name = "Vimgine"
-version = "0.1.0"
-dependencies = [
- "bevy",
- "bevy_config_cam",
-]
-
-[[package]]
 name = "ab_glyph"
 version = "0.2.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3275,6 +3267,14 @@ name = "version_check"
 version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5fecdca9a5291cc2b8dcf7dc02453fee791a280f3743cb0905f8822ae463b3fe"
+
+[[package]]
+name = "vimgine"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_config_cam",
+]
 
 [[package]]
 name = "waker-fn"

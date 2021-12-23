@@ -2,9 +2,11 @@ use bevy::prelude::*;
 
 use bevy_config_cam::*;
 
+mod usr;
 
 fn main() {
-    App::build()
+    let mut app = App::build();
+    app
         .add_plugins(DefaultPlugins)
         .add_plugin(PlayerPlugin)
         // .insert_resource(Msaa{samples: 4})
@@ -18,26 +20,12 @@ fn main() {
         })
 
         // startup systems
-        .add_startup_system(setup.system())
+        .add_startup_system(usr::setup::setup.system());
+        usr::setup::sys_setup(&mut app);
+        
 
         //runtime systems
 
-        .run();
+        app.run();
 }
-
-fn setup(
-    mut c: Commands,
-    mut meshes: ResMut<Assets<Mesh>>,
-    mut materials: ResMut<Assets<StandardMaterial>>,
-){
-    c.spawn_bundle(PbrBundle{
-        mesh: meshes.add(Mesh::from(shape::Plane {size: 5.0})),
-        material: materials.add(Color::rgb(0.3,0.5,0.3).into()),
-        ..Default::default()
-    });
-}
-
-
-
-
 
