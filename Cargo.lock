@@ -9,6 +9,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fe438c63458706e03479442743baae6c88256498e6431708f6dfc520a26515d3"
 
 [[package]]
+name = "Vimgine"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_config_cam",
+]
+
+[[package]]
 name = "ab_glyph"
 version = "0.2.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -192,14 +200,6 @@ checksum = "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd"
 
 [[package]]
 name = "bevy"
-version = "0.1.0"
-dependencies = [
- "bevy 0.5.0",
- "bevy_config_cam",
-]
-
-[[package]]
-name = "bevy"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c6b14f8ba7c373fdf7bd27547bb95f2849b2569bf02bbf3d19ca54e9d692de4f"
@@ -281,7 +281,7 @@ version = "0.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8fc56ac3762511878ec7314c0247a4eb494fbf6ef27ae38c5c9a7e75a5804fc3"
 dependencies = [
- "bevy 0.5.0",
+ "bevy",
  "rand",
  "strum",
  "strum_macros",

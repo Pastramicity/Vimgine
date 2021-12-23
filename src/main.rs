@@ -1,30 +1,27 @@
 use bevy::prelude::*;
 
-
-
-
-
-
+use bevy_config_cam::*;
 
 
 fn main() {
     App::build()
         .add_plugins(DefaultPlugins)
-        .add_plugin(bevy_config_cam::PlayerPlugin)
+        .add_plugin(PlayerPlugin)
         // .insert_resource(Msaa{samples: 4})
         .insert_resource(WindowDescriptor{
             title: "Vimgine".to_string(),
             width: 3840.,
             height: 2160.,
-            // vsync: false,
+            vsync: false,
             decorations: true,
             ..Default::default()
         })
+
+        // startup systems
         .add_startup_system(setup.system())
 
-        // .add_system(editor_cam_look.system())
-        // .add_system(editor_cam_move.system())
-        // .add_system(toggle_cursor.system())
+        //runtime systems
+
         .run();
 }
 
@@ -39,5 +36,8 @@ fn setup(
         ..Default::default()
     });
 }
+
+
+
 
 
