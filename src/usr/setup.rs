@@ -18,5 +18,6 @@ pub fn setup(
         material: materials.add(Color::rgb(0.3,0.5,0.3).into()),
         ..Default::default()
     }).insert(cmp::example_cmp::example_component);
+
 }
 
